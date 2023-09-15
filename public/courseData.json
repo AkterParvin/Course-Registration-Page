@@ -1,0 +1,79 @@
+[
+  {
+    "cover": "https://i.ibb.co/VNgPctz/programming.jpg",
+    "name": "Introduction to Programming",
+    "detail": "Foundational understanding of programming concepts for beginners.",
+    "price": 49.99,
+    "credit_hr": 3
+  },
+  {
+    "cover": "https://i.ibb.co/WDLgwLX/Web.jpg",
+    "name": "Web Development Fundamentals",
+    "detail": "Learn HTML, CSS, and JavaScript to build web pages and applications.",
+    "price": 59.99,
+    "credit_hr": 4
+  },
+  {
+    "cover": "https://i.ibb.co/KwwGhPZ/data-science.jpg",
+    "name": "Data Science Essentials",
+    "detail": "Introduction to data analysis, machine learning, and data visualization.",
+    "price": 69.99,
+    "credit_hr": 5
+  },
+  {
+    "cover": "https://i.ibb.co/cQ5bGvh/graphics.jpg",
+    "name": "Graphic Design Basics",
+    "detail": "Principles of layout, color theory, and typography in graphic design.",
+    "price": 54.99,
+    "credit_hr": 3
+  },
+  {
+    "cover": "https://i.ibb.co/Tmdyz85/Financial-Planning-1.jpg",
+    "name": "Financial Planning 101",
+    "detail": "Personal finance and investment strategies for beginners.",
+    "price": 44.99,
+    "credit_hr": 2
+  },
+  {
+    "cover": "https://i.ibb.co/19ZK1zh/Digital-Marketing.jpg",
+    "name": "Digital Marketing Fundamentals",
+    "detail": "Essentials of digital marketing, including SEO and social media.",
+    "price": 49.99,
+    "credit_hr": 3
+  },
+  {
+    "cover": "https://i.ibb.co/Cw5j9Fm/Psychology.jpg",
+    "name": "Introduction to Psychology",
+    "detail": "Basic concepts and human behavior in psychology.",
+    "price": 39.99,
+    "credit_hr": 2
+  },
+  {
+    "cover": "https://i.ibb.co/WV686MT/English.jpg",
+    "name": "English Language Mastery",
+    "detail": "Improving English language skills in speaking and writing.",
+    "price": 34.99,
+    "credit_hr": 2
+  },
+  {
+    "cover": "https://i.ibb.co/d0WBtZ0/Photography.jpg",
+    "name": "Photography Basics",
+    "detail": "Fundamentals of photography, camera operation, and composition.",
+    "price": 49.99,
+    "credit_hr": 3
+  },
+  {
+    "cover": "https://i.ibb.co/Xyy88Wy/Healthy-Living.jpg",
+    "name": "Healthy Living & Nutrition",
+    "detail": "Principles of a healthy lifestyle, including nutrition and exercise.",
+    "price": 59.99,
+    "credit_hr": 4
+  },
+  {
+    "cover": "https://i.ibb.co/LQxxbgd/Entrepreneurship.jpg",
+    "name": "Entrepreneurship Fundamentals",
+    "detail": "Introduction to entrepreneurship and startup basics.",
+    "price": 64.99,
+    "credit_hr": 4
+  }
+]
