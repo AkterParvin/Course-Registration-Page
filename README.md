@@ -1,16 +1,19 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Course Registration
 
-Currently, two official plugins are available:
+This simple Course Registration webpage was given as my assignment-07 project and i tried my best to make it pixel pefect.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-<h1>Course Registration</h1>
+## Best Features Of This Project
 
-##  Questions
-
-- Add at least 3 Project features 
+- Can avail courses according to our available credit hours.
+- Can monitor total amount of used credit hours.
+- will be alerted if we exceed the credit hour limit.
 
 
-- Discuss how you managed the state in your assignment project.
+
+## Lessons Learned: 
+## How to manage states accordingto the project>
+
+i have use two different types of state in this projetc.
+Number one is having a default 
+
