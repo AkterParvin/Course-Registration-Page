@@ -80,12 +80,12 @@ const Home = () => {
     }
 
     return (
-        <div >
+        <div className="container mx-auto">
            
-            <main className="flex flex-col md:flex-row justify-between items-start gap-4">
+            <main className="flex flex-col lg:flex-row justify-between items-start gap-4">
 
                 {/* card container  */}
-                <div className="grid lg:grid-cols-3 gap-3 w-2/3">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 w-full lg:w-2/3">
                     {
                         courses.map((course, idx) =>
                             <Card key={idx} prop={course}
@@ -97,7 +97,7 @@ const Home = () => {
                 </div>
 
                 {/* credit container  */}
-                <div className="w-1/3">
+                <div className="w-full lg:w-1/3">
                     <Credit takenCourse={takenCourse}
                         takenCoursePrice={takenCoursePrice}
                         totalCreditHr={totalCreditHr}

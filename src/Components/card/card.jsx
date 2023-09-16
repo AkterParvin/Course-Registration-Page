@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const Card = ({ prop, handleCourse }) => {
     const { cover, name, detail, price, credit_hr } = prop;
     return (
-        <div>
-            <div className=" p-5 rounded-xl bg-base-100 shadow-xl w-[250px] h-[450px]">
-                <img src={cover} alt="Shoes" className="rounded-lg  w-[230px] h-[150px] " />
+        <div className="container mx-auto">
+            <div className=" p-5 rounded-xl bg-base-100 shadow-lg shadow-red-700/50 lg:w-[260px] lg:h-[460px] bg-stone-100">
+                <img src={cover} alt="Shoes" className="rounded-lg  lg:w-[230px] " />
 
                 <div className="flex flex-col space-y-4  ">
                     <h2 className="mt-4 text-left text-sm font-semibold text-[#1C1B1B]">{name}</h2>

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-// import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Credit = ({ takenCourse, takenCoursePrice, totalCreditHr, remainingHr }) => {
     
@@ -40,7 +39,7 @@ const Credit = ({ takenCourse, takenCoursePrice, totalCreditHr, remainingHr }) =
         </div>
     );
 };
-{/* <ToastContainer /> */}
+
 Credit.propTypes = {
     takenCourse: PropTypes.array.isRequired,
     takenCoursePrice:PropTypes.number,
