@@ -12,7 +12,7 @@ This simple Course Registration webpage was given as my assignment-07 project an
 
 
 ## Lessons Learned: 
-## How to manage states accordingto the project>
+## How to manage states according to the project>
 
 i have use two different types of state in this projetc.
 Number one is having an empty array as its default value,which is like below-
