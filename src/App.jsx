@@ -7,9 +7,16 @@ function App() {
 
   return (
     <>
+      <div className='container mx-auto'>
+        <header>
+          <h1 className='text-4xl text-black font-bold  text-center my-10'>Course Registration</h1>
+        </header>
+        <Home></Home>
 
-      <Home></Home>
-      
+      </div>
+
+     
+
 
     </>
   )
