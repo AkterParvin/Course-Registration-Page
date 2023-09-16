@@ -61,7 +61,7 @@
     "name": "English Language Mastery",
     "detail": "Improving English language skills in speaking and writing.",
     "price": 3000,
-    "credit_hr": 2
+    "credit_hr": 3
   },
   {
      "id" : 9,
@@ -69,7 +69,7 @@
     "name": "Photography Basics",
     "detail": "Fundamentals of photography, camera operation, and composition.",
     "price": 5200,
-    "credit_hr": 3
+    "credit_hr": 5
   },
   {
      "id" : 10,

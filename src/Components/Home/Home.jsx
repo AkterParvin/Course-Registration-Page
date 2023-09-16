@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 import Card from "../card/card";
 import Credit from "../credit/credit";
+import Swal from "sweetalert2";
 
 
 
@@ -39,22 +42,40 @@ const Home = () => {
 
         
         if (isTaken) {
-            return alert('This course is already taken');
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'You have already taken this course!',
+                footer: '<a href="">Please choose others</a>'
+            })
+            
+           
         }
         else {
             takenCourse.forEach((item) => {
             initial = initial + item.price; 
             initialHour = initialHour + item.credit_hr;
         })
-        setTakenCoursePrice(initial);
-        
         const newTakenCourse = [...takenCourse, course];
         setTakenCourse(newTakenCourse);
 
             const newRemaininghour = 20 - initialHour;
             if (newRemaininghour < 0 || initialHour>20 ) {
-                return alert('you have excceded the total credit hour')
+                return Swal.fire({
+                    title: 'Your limited Credit Hour amount has finished',
+                    width: 600,
+                    padding: '3em',
+                    color: '#716add',
+                    background: '#fff url(/images/trees.png)',
+                    backdrop: `
+    rgba(0,0,123,0.4)
+    url("https://i.ibb.co/y42Jqrx/nyancat-rainbow-cat.gif")
+    left top
+    no-repeat
+  `
+                })
             } else {
+            setTakenCoursePrice(initial);
             settotalCreditHr(initialHour);
             setRemainingHr(newRemaininghour);
             }
