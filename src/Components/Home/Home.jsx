@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-
 import Card from "../card/card";
 import Credit from "../credit/credit";
 import Swal from "sweetalert2";
@@ -27,8 +24,7 @@ const Home = () => {
         .then(data => setCourses(data))
     }, [])
     
-    // console.log(takenCoursePrice);
-    // console.log(totalCreditHr);
+    
 
     console.log(remainingHr);
     // function for adding courses to the cart container
@@ -37,8 +33,7 @@ const Home = () => {
         const isTaken = takenCourse.find(i => i.id == course.id);
         let initial = course.price;
         let initialHour = course.credit_hr;
-        // console.log(initialHour);
-        // console.log(initial);
+        
 
         
         if (isTaken) {
@@ -84,10 +79,6 @@ const Home = () => {
         
     }
 
-    // function to add time
-
-
-    // console.log(courses);
     return (
         <div >
            

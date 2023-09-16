@@ -8,7 +8,7 @@ const Credit = ({ takenCourse, takenCoursePrice, totalCreditHr, remainingHr }) =
         <div>
             <div className="card  bg-base-100 shadow-xl ">
                 <div className="bg-slate-300 rounded-lg mb-2">
-                    <h1 className="my-4 text-sm font-bold text-sky-600">Credit Hour Remaining : {remainingHr} hr</h1>
+                    <h1 className="my-4 text-base font-bold text-sky-600">Credit Hour Remaining : {remainingHr} hr</h1>
 
                 </div>
                 <hr />

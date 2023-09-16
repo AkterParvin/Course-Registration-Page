@@ -24,7 +24,7 @@ const Card = ({ prop, handleCourse }) => {
                     </div>
                     <button onClick={() => handleCourse(prop)}
                     
-                        className="font-semibold text-white text-sm  bg-sky-600 px-18 py-2 rounded-lg">Select</button>
+                        className="font-semibold text-white text-sm px-18 py-2 rounded-lg btn">Select</button>
 
                 </div>
             </div>

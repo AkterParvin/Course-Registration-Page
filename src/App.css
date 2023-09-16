@@ -40,3 +40,34 @@
 .read-the-docs {
   color: #888;
 }
+.btn{
+   
+    background: rgb(85, 116, 254);
+    border: 3px solid rgb(1, 0, 88);
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+
+}
+.btn:hover{
+  border: 3px solid rgb(2, 48, 49);
+  background: rgb(53, 196, 167);
+}
+.btn::after{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    background: rgb(53, 196, 167);
+    inset: 0;
+    border-radius: 15px;
+    scale: 0 1;
+    transition:scale 450ms;
+    color: chartreuse;
+}
+.btn:hover::after,
+.btn:focus-visible::after
+{
+transform-origin: left;
+scale: 1 1;
+
+}
