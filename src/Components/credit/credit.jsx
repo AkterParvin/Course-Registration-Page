@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
-const Credit = ({ takenCourse, takenCoursePrice }) => {
+const Credit = ({ takenCourse, takenCoursePrice, totalCreditHr, remainingHr }) => {
     
     return (
         <div>
             <div className="card  bg-base-100 shadow-xl ">
                 <div className="bg-slate-300 rounded-lg mb-2">
-                    <h1 className="my-4 text-sm font-bold text-sky-600">Credit Hour Remaining :{} hr</h1>
+                    <h1 className="my-4 text-sm font-bold text-sky-600">Credit Hour Remaining : {remainingHr} hr</h1>
 
                 </div>
                 <hr />
@@ -14,6 +14,7 @@ const Credit = ({ takenCourse, takenCoursePrice }) => {
                 <div className="flex flex-col ">
                     <div>
                         <h2 className="my-4 text-left  font-bold text-xl text-[#1C1B1B]">Course Name</h2>
+                        <h2 className="mb-4 text-left  font-bold text-sm text-green-700">Total Course Taken: {takenCourse.length }</h2>
 
                         <p className="text-left font-normal text-xs text-[#1c1b1b99] mb-4">
                             {
@@ -24,10 +25,10 @@ const Credit = ({ takenCourse, takenCoursePrice }) => {
                          
                         </p>
                         <hr />
-                        <p className=" text-left font-medium text-xs text-[#1c1b1b99] my-4" >Total Credit Hour :{ } hr </p>
+                        <p className=" text-left font-medium text-xs text-[#1c1b1b99] my-4" >Total Credit Hour : {totalCreditHr}hr </p>
                         <hr />
                         <p className=" text-left font-semibold text-xs text-[#1c1b1b99] my-4">
-                            Total Price :{takenCoursePrice} USD
+                        Total Price : {takenCoursePrice} USD
                         </p>
 
                     </div>
@@ -38,7 +39,10 @@ const Credit = ({ takenCourse, takenCoursePrice }) => {
     );
 };
 Credit.propTypes = {
-    takenCourse: PropTypes.array.isRequired
+    takenCourse: PropTypes.array.isRequired,
+    takenCoursePrice:PropTypes.number,
+    totalCreditHr:PropTypes.number,
+    remainingHr: PropTypes.number,
 
 }
 export default Credit;

@@ -12,41 +12,55 @@ const Home = () => {
     const [takenCourse, setTakenCourse] = useState([]);
     // state for total taken course price 
     const [takenCoursePrice, setTakenCoursePrice] = useState(0);
-    // state for remaining credit hours 
+    // state for total credit hours 
+    const [totalCreditHr, settotalCreditHr] = useState(0);
 
-    console.log(takenCoursePrice);
+    // state for total remaining credit hours 
+    const [remainingHr, setRemainingHr] = useState(0);
 
     useEffect(() => {
         fetch('courseData.json')
         .then(res=>res.json())
         .then(data => setCourses(data))
-    },[])
+    }, [])
+    
+    // console.log(takenCoursePrice);
+    // console.log(totalCreditHr);
 
-    console.log(takenCourse);
+    console.log(remainingHr);
     // function for adding courses to the cart container
     
-
     const handleCourse = course=> {
         const isTaken = takenCourse.find(i => i.id == course.id);
         let initial = course.price;
+        let initialHour = course.credit_hr;
+        // console.log(initialHour);
         // console.log(initial);
+
+        
         if (isTaken) {
             return alert('This course is already taken');
-        } else {
+        }
+        else {
             takenCourse.forEach((item) => {
             initial = initial + item.price; 
+            initialHour = initialHour + item.credit_hr;
         })
-            // const remaininghour = 20000 - initial;
+        setTakenCoursePrice(initial);
+        
+        const newTakenCourse = [...takenCourse, course];
+        setTakenCourse(newTakenCourse);
 
-            setTakenCoursePrice(initial);
-
-
-            const newTakenCourse = [...takenCourse, course];
-            setTakenCourse(newTakenCourse);
+            const newRemaininghour = 20 - initialHour;
+            if (newRemaininghour < 0 || initialHour>20 ) {
+                return alert('you have excceded the total credit hour')
+            } else {
+            settotalCreditHr(initialHour);
+            setRemainingHr(newRemaininghour);
+            }
+           
         }
         
-   
-
     }
 
     // function to add time
@@ -64,6 +78,7 @@ const Home = () => {
                         courses.map((course, idx) =>
                             <Card key={idx} prop={course}
                             handleCourse={handleCourse}
+                            
 
                         ></Card>)
                     }
@@ -73,6 +88,8 @@ const Home = () => {
                 <div className="w-1/3">
                     <Credit takenCourse={takenCourse}
                         takenCoursePrice={takenCoursePrice}
+                        totalCreditHr={totalCreditHr}
+                        remainingHr={remainingHr}
                     
                     ></Credit>
 
