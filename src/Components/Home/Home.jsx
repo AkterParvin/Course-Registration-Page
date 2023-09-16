@@ -6,7 +6,15 @@ import Credit from "../credit/credit";
 
 
 const Home = () => {
-    const[courses,setCourses]=useState([])
+    // state declared for course data fetch 
+    const [courses, setCourses] = useState([]);
+    // state for showing course names 
+    const [takenCourse, setTakenCourse] = useState([]);
+    // state for total taken course price 
+    const [takenCoursePrice, setTakenCoursePrice] = useState(0);
+    // state for remaining credit hours 
+
+    console.log(takenCoursePrice);
 
     useEffect(() => {
         fetch('courseData.json')
@@ -14,16 +22,34 @@ const Home = () => {
         .then(data => setCourses(data))
     },[])
 
+    console.log(takenCourse);
     // function for adding courses to the cart container
-    const[takenCourse,setTakenCourse]=useState([])
+    
 
     const handleCourse = course=> {
-        const newTakenCourse = [...takenCourse, course];
-        setTakenCourse(newTakenCourse);
+        const isTaken = takenCourse.find(i => i.id == course.id);
+        let initial = course.price;
+        // console.log(initial);
+        if (isTaken) {
+            return alert('This course is already taken');
+        } else {
+            takenCourse.forEach((item) => {
+            initial = initial + item.price; 
+        })
+            // const remaininghour = 20000 - initial;
+
+            setTakenCoursePrice(initial);
+
+
+            const newTakenCourse = [...takenCourse, course];
+            setTakenCourse(newTakenCourse);
+        }
+        
+   
 
     }
 
-    function to add time
+    // function to add time
 
 
     // console.log(courses);
@@ -45,7 +71,12 @@ const Home = () => {
 
                 {/* credit container  */}
                 <div className="w-1/3">
-                    <Credit takenCourse={takenCourse}></Credit>
+                    <Credit takenCourse={takenCourse}
+                        takenCoursePrice={takenCoursePrice}
+                    
+                    ></Credit>
+
+
                 </div>
 
                

@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 
-const Credit = ({ takenCourse }) => {
-    console.log(takenCourse);
-    // const { name } = takenCourse;
+const Credit = ({ takenCourse, takenCoursePrice }) => {
+    
     return (
         <div>
             <div className="card  bg-base-100 shadow-xl ">
@@ -28,7 +27,7 @@ const Credit = ({ takenCourse }) => {
                         <p className=" text-left font-medium text-xs text-[#1c1b1b99] my-4" >Total Credit Hour :{ } hr </p>
                         <hr />
                         <p className=" text-left font-semibold text-xs text-[#1c1b1b99] my-4">
-                            Total Price :{ } USD
+                            Total Price :{takenCoursePrice} USD
                         </p>
 
                     </div>
